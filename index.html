@@ -8,43 +8,124 @@
     <meta name="author" content="Réaliser par Groupe 6 de Edutech"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La nouvelle école de surf décentralisée</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Hero background using local image -->
+    <style>
+      .hero {
+        position: relative;
+        background-image: url('aventure .jpg'); /* Assurez-vous que le chemin de l'image est correct */
+        background-size: cover;
+        background-position: center;
+        min-height: 30vh;
+        display: flex;
+        align-items: center;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.45);
+      }
+      .hero .hero-content {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+      }
+      @media (min-width: 992px) {
+        .hero { min-height: 70vh; }
+        .hero .display-4 { font-size: 3rem; }
+      }
+      .footer {
+        background-color: #faf8f9;
+        text-align: center;
+        padding: 1rem 0;
+        margin-top: 2rem;
+      }
+      .mainNav .btn-primary {
+        justify-content: flex-end;
+        background-color: color-mix(in hsl(210, 50%, 50%), hsl(210, 50%, 60%), 50%);
+        border-radius: 0.25rem;
+        padding: 0.5rem 1rem;
+        color: thistle;
+      }
+    </style>
 </head>
 <body>
     <header>
-        <section id="logo">
-            <nav class="imgur">
-                <ul>
-                    <li><a href="https://imgur.com/">imgur</a></li>
-                    <li><a href="https://imgur.com/upload">Nouveau message</a></li>
-                    <li><img src="plus-icon.png" alt="Nouveau message"></li>
-                    <li><a href="https://imgur.com/meme-generator">Creez un mème</a></li>
-                    <li><img src="meme-icon.png" alt="Générateur de mèmes"></li>
-                    <li><a href="https://imgur.com/arcade">Arcade ouverte</a></li>
-                    <li><img src="arcade-icon.png" alt="Arcade ouverte"></li>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">The Surfing Project</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="https://imgur.com/">imgur</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://imgur.com/upload">Nouveau message</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://imgur.com/meme-generator">Creez un mème</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://imgur.com/arcade">Arcade ouverte</a></li>
 
-                </ul>
-            </nav>
-        </section>
-        <section id="compte">
-            <nav class="compte">
-                <ul>
-                    <li><a href="https://imgur.com/gallery/18m-views-24-hours-hows-that-ratings-dt-you-kwtFJIg">suivant ></a></li>
-                    <li><a href="https://imgur.com/signin">Se connecter</a></li>
-                    <li><a href="https://imgur.com/signup">S'inscrire</a></li>
-                </ul>
-            </nav>
-        </section>
-        <h1>Bienvenue à la nouvelle école de surf décentralisée</h1>
-    </header>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+           <li class="nav-item"><a class="nav-link" href="https://imgur.com/gallery/O3QkzxL">Suivant ></a></li>
+           <li class="nav-item"><a class="nav-link" href="https://imgur.com/signin#%2FGjTtsBA">Se connecter</a></li>
+           <li class="nav-item"><a class="nav-link btn btn-primary text-white" href="https://imgur.com/register#%2FGjTtsBA">S'inscrire</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO : image de fond + overlay + texte centré -->
+  <section class="hero">
+    <div class="container hero-content text-center">
+      <h1 class="display-4 fw-light mb-3">Partez à l'aventure</h1>
+      <p class="lead mb-4">Découvrez notre école de surf en peer-learning</p>
+      <div class="d-inline-flex gap-2">
+        <a href="https://imgur.com/register#%2FGjTtsBA" class="btn btn-primary btn-lg">Je m'inscris à la prochaine session</a>
+        <a href="Programme.html" class="btn btn-outline-light btn-lg">Je découvre le programme</a>
+      </div>
+    </div>
+  </section>
+</header>
     <main>
-        <section>
-            <h2>À propos de nous</h2>
-            <p>Nous sommes une école de surf innovante qui utilise la technologie blockchain pour offrir une expérience d'apprentissage unique.</p>
+        <section class="text-center my-5">
+            <h2>Rejoignez notre communauté</h2>
+            <p>Faites partie d'une communauté passionnée de surfeurs et d'apprenants. Partagez vos expériences, échangez des conseils et connectez-vous avec d'autres membres.</p>
+            <a href="https://imgur.com/register#%2FGjTtsBA" class="btn btn-secondary">Rejoindre la communauté</a>
         </section>
+        <!--Insertion du button j'aime -->
+        <section class="text-center my-5">
+            <button type="button" class="btn btn-outline-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+                  <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.365 1.176.714.282.32.434.757.458 1.208l.003.169c-.003.076-.01.152-.02.227l-.004.03c-.058.272-.153.52-.285.738l-.002.003c-.13.216-.306.39-.51.515l-.002.001c-.204.126-.44.198-.69.198H9v5h3a2 2 0 0 1 1.984 2.181l-.006.137-.271 1A2 2 0 0 1 12 15H6a2 2 0 0 1-1.995-1.85L4 13V6h-.5a2 2 0 0 1-1.98-1.75L2 4c0-.083.008-.165.023-.244l.004-.03c.058-.272.153-.52.285-.738l.002-.003c.13-.216.306-.39.51-.515l.002-.001c.204-.126.44-.198.69-.198H6l .956-3 .956zM5 .5a3 3 0 0 0-2 .75A3 3 0 0 0 2 .5H1a1 1 0 0 0-1 .993L0 .5v3a1 1 0 0 0 .993 .993L1 .5h4z"/>
+                </svg>
+                J'aime
+            </button>
+        </section>
+        <!-- Insertion d'un button de partage: une flèche pour partager soit sur les réseaux sociaux, mail, etc.-->
+        <section class="text-center my-5">
+            <button type="button" class="btn btn-outline-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                  <path d="M11.596 1.204a1 1 0 0 1 1.415 0l2.5 2.5a1 1 0 0 1 0 1.415l-2.5 2.5a1 1 0 0 1-1.415-1.415L12.586 6H8a4 4 0 1 0 0 8h4.586l-1.293 1.293a1 1 0 0 1-1.415-1.415l2.5-2.5a1 1 0 0 1 1.415 0l2.5 2.5a1 1 0 0 1 0 1.415l-2.5 2.5a1 1 0 0 1-1.415-1.415L12.586 14H8a6 6 0 1 1 0-12h4.586l-1.293-1.293a1 1 0 0 1 0-1.415z"/>
+                </svg>
+                Partager
+            </button>
+        </section>
+        <section class="text-center my-5">
+            <h1>The Surfing Project en 3 points</h1>
+
+                <div class="ms-3">
+            <p>Pour toute question ou information supplémentaire, n'hésitez pas à nous contacter. Nous sommes là pour vous aider à chaque étape de votre parcours d'apprentissage.</p>
+            <a href="contact.html" class="btn btn-secondary">Contactez-nous</a>
     </main>
-    <footer>
-        <p>&copy; 2023 La nouvelle école de surf décentralisée</p>
+    <footer class="footer">
+        <p>&copy; 2025 The Surf Project</p>
     </footer>
+
+    <!-- Ajouter le JS de Bootstrap (bundle inclut Popper) -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

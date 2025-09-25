@@ -1,0 +1,53 @@
+<!-- Hero CSS (ajoute ceci pour l'overlay et le background) -->
+  
+.hero {
+  position: relative;
+  /* utilisation de l'image locale */
+  background-image: url('aventure .jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* overlay sombre pour faire ressortir le texte */
+  background: linear-gradient(rgba(20,23,26,0.65), rgba(0,0,0,0.35));
+  z-index: 1;
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 1rem;
+}
+
+.hero .display-4 {
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+/* bouton large et espacement comme sur la maquette */
+.hero .btn {
+  min-width: 220px;
+}
+
+/* ajustements pour grands écrans */
+@media (min-width: 992px) {
+  .hero { min-height: 75vh; }
+  .hero .display-4 { font-size: 3.2rem; }
+}
+
+/* petites corrections visuelles */
+body { background-color: #fff; }
